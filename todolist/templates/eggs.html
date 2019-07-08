@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Count Eggs</title>
+    </head>
+
+    <body>
+        <h1>ISI DARI TEXT AREA ADALAH</h1>
+
+        {{ fulltext }}
+
+        </br>
+        <h1>jumlah string = {{countstr}}</h1>
+        <br/>
+        <h1>jumlah kata = {{countwrd}}</h1>
+        <br/>
+        <h1>kata yang sering muncul:</h1>
+
+            {% for word, counttotal in sortedwords %}
+                {{ word }} - {{ counttotal }}
+                <br>
+            {% endfor %}
+
+        <br/>
+
+        <form action="{% url 'count' %}">
+
+            <input type="submit" value="START AGAIN" />
+        </form>
+
+    </body>
+
+</html>
+
